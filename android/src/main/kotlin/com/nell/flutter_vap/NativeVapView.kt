@@ -34,21 +34,21 @@ internal class NativeVapView(binaryMessenger: BinaryMessenger, context: Context,
         vapView.setScaleType(ScaleType.FIT_CENTER)
         vapView.setAnimListener(object : IAnimListener {
             override fun onFailed(errorType: Int, errorMsg: String?) {
-                GlobalScope.launch(Dispatchers.Main) {
-                    methodResult?.success(HashMap<String, String>().apply {
-                        put("status", "failure")
-                        put("errorMsg", errorMsg ?: "unknown error")
-                    })
-
-                }
+//                GlobalScope.launch(Dispatchers.Main) {
+//                    methodResult?.success(HashMap<String, String>().apply {
+//                        put("status", "failure")
+//                        put("errorMsg", errorMsg ?: "unknown error")
+//                    })
+//
+//                }
             }
 
             override fun onVideoComplete() {
-                GlobalScope.launch(Dispatchers.Main) {
-                    methodResult?.success(HashMap<String, String>().apply {
-                        put("status", "complete")
-                    })
-                }
+//                GlobalScope.launch(Dispatchers.Main) {
+//                    methodResult?.success(HashMap<String, String>().apply {
+//                        put("status", "complete")
+//                    })
+//                }
             }
 
             override fun onVideoDestroy() {
