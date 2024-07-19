@@ -1,5 +1,9 @@
 package com.nell.flutter_vap
 
+import android.os.Handler
+import android.os.Looper
+import io.flutter.plugin.common.MethodChannel
+
 class MethodResultWrapper(private val methodResult: MethodChannel.Result) : MethodChannel.Result {
     private val handler: Handler = Handler(Looper.getMainLooper())
 
